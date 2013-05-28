@@ -31,17 +31,30 @@
 	.fullwidth{
 		width:100%;
 	}
+	#sidebar{
+		height: 400px;
+		overflow: hidden;
+
+	}
+	#sidebar img{
+		position: absolute;
+		left: 0;
+		max-height: 400px;
+	}
+	#slider{
+		height: 400px;
+		background: url(http://placehold.it/1600x400) 50% 50% no-repeat;
+	}
 @media (max-width: 767px) {
-  #sidebar{
-    position:absolute;
-    left: 0;
-    width: 100%;      
+  #slider{
+   margin-left: -20px;
+   margin-right: -20px;
   }
 }
 
 @media (min-width: 768px) {
   #sidebar{
-    position:relative;
+
   }
 }
 	</style>
@@ -56,7 +69,16 @@
 			<span class="color3"><a href="#">menu 3</a></span>
 		</div>
 </div>
-<div id="sidebar" class="row-fluid slider color1"><img src="http://placehold.it/1280x450" alt="placeholder"></div>
+<!-- <div id="sidebar" class="container-fluid slider color1"><img src="http://placehold.it/1280x450" alt="placeholder"></div> -->
+<div id="slider" class="color2">TEST</div>
+
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span4">column 1</div>
+		<div class="span4">column 2</div>
+		<div class="span4">column 3</div>
+	</div>
+</div>
 
 
 
