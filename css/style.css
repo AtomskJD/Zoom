@@ -1,0 +1,60 @@
+.color1{
+	background:#eee;
+	
+}
+.color2{
+	background:#ddd;
+}
+.color3{
+	background:#aaa;
+}
+.item{
+	height: 100px;
+}
+
+.centered{
+	float: none;
+	margin: auto;
+	text-align: center;
+}
+.fullwidth{
+	width:100%;
+}
+#sidebar{
+	height: 400px;
+	overflow: hidden;
+
+}
+#sidebar img{
+	position: absolute;
+	left: 0;
+	max-height: 400px;
+}
+#slider{
+	height: 400px;
+	background: url(http://placehold.it/1600x400) 50% 50% no-repeat;
+}
+@media (max-width: 767px) {
+#slider{
+margin-left: -20px;
+margin-right: -20px;
+}
+}
+
+@media (min-width: 768px) {
+#sidebar{
+
+}
+}
+
+#contacts{
+	position:absolute;
+	height:40px;
+	left: 0;
+	width: 100%;
+	display: none;
+}
+#logo{
+	margin: 20px auto 0;
+	background: #fdd;
+}
