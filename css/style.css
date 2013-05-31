@@ -1,6 +1,21 @@
 .half-sized{
 	overflow: hidden;
-	background: yellow;
+	background: #FFD;
+}
+
+#slider{
+	overflow: hidden;
+	/*position: absolute;*/
+}
+#slider .background{
+		background-image: url(http://placehold.it/1600x500);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-height: 180px;
+		position: relative;
+		height: 100%;
+
 }
 
 .color1{
