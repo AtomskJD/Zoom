@@ -1,4 +1,9 @@
-$(function(){
+var zoom = {
+
+}
+
+
+/*$(function(){
 
 $('#container').isotope({
   // options
@@ -21,3 +26,4 @@ $('h2').click(function(){
 	$(document).scrollTo('#scroll', 800);	
 });
 });
+*/
