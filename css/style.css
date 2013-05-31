@@ -1,3 +1,8 @@
+.half-sized{
+	overflow: hidden;
+	background: yellow;
+}
+
 .color1{
 	background:#eee;
 	
