@@ -5,6 +5,7 @@ var Zoom = {
 
 	init: function(container){
 		var _this = this;
+		console.log("load once");
 		/*init полуразмер банера*/
 		if(container.find('.half-sized').length){
 			Zoom.HalfSize.init(container.find('.half-sized'));
@@ -14,9 +15,47 @@ var Zoom = {
 				});
 		}
 		
-	}
+		if(container.find('#scroll-to-content').length){
+			Zoom.scrollToContent.init(container.find('#scroll-to-content'));
+		}
+//TODO: переписать под инициализацию-тело
+
+/*$('.test-container').isotope({
+	itemSelector: '.item',
+	layoutMode: 'fitRows'
+});*/var iii = 1;
+		$('h3').click(function(){
+
+			$('.test-container').load('item1.html #item'+iii);
+			iii = iii + 1;
+			/*$(window).scrollTo('h1', 400);
+			$(window).queue(function(){
+				$('.scene').slideToggle(1000);
+				$(this).dequeue();
+			});*/
+			
+			// $('.scene').load('grid.html');
+				// $('.scene').slideToggle(1000);
+				// $('.scene').show().animate({height:'500px'}, 500);
+
+				/*var newItems = $('<div class="item"><div class="item2" /></div>');
+				$('.test-container').isotope( 'insert', newItems );*/
+
+		});
+	}//END INIT
 
 };
+
+Zoom.scrollToContent = {
+
+	init: function(e){
+		var obj = $(e).find('a');
+		$(obj).click(function(){
+
+			$(window).scrollTo('#content', 400);
+		});
+	}
+}
 
 Zoom.HalfSize = {
 	init: function(e){
