@@ -18,6 +18,11 @@ var Zoom = {
 		if(container.find('#scroll-to-content').length){
 			Zoom.scrollToContent.init(container.find('#scroll-to-content'));
 		}
+
+		/*init navigation*/
+		if (container.find('nav a').length) {
+			Zoom.Navigation.init(container.find('nav a'));
+		};
 //TODO: переписать под инициализацию-тело
 
 /*$('.test-container').isotope({
@@ -74,6 +79,38 @@ Zoom.HalfSize = {
 
 	}
 }
+
+Zoom.Navigation = {
+	init: function(e){
+		var _this = this,
+		defaults = {
+			child: 'span',
+			parent: 'nav',
+			speed: 200
+		};
+	$(e).click(function(){
+		var $this = $(this);
+		_this.setActive($this, defaults);
+	});
+	},
+	setActive: function($active, defaults){
+		var _this = this,
+			$li = $active.parent('li');
+
+		if(!$li.hasClass('active')){
+			 console.log("menu slide");
+			$active.parents(defaults.parent).find('.active ' + defaults.child).slideToggle(defaults.speed, 
+				function(){
+					$(this).parents('.active').removeClass('active');
+					$active.find(defaults.child).slideToggle(defaults.speed, 
+						function(){
+							//$(this).parents('li').addClass('active');
+							$li.addClass('active');
+						});
+				});
+		}
+	}
+};
 
 $(function(){
 	Zoom.init($('body'));

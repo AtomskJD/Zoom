@@ -33,7 +33,49 @@
 	left: 0;
 	background: #FCF;
 }
+/*navigation bar*/
+nav {
+	border-top: 1px #222 solid;
+	margin: 0 auto;
+	display: block;
+	max-width: 400px;
+}
+nav ul, nav ol{
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
+	zoom: 1;
+	display: block;
+}
+nav li{
+	display: inline;
+	float:left;
+	width: 30%;
+	text-align: center;
+}
+nav li a{
+	position: relative;
+	display: inline-block;
+	line-height: 21px;
+	padding: 15px 5px 6px;
 
+	text-transform: uppercase;
+}
+nav li a span{
+	background: #222;
+	height: 4px;
+	position: absolute;
+	top: 0;
+	left:5px;
+	right: 5px;
+	display: none;
+}
+nav li.active a span{
+	display: block;
+}
+
+/*navigation bar END*/
 .test-container{
 	width: 100%;
 	height: 500px;
