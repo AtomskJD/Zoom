@@ -14,9 +14,9 @@
 </head>
 <body>
 	
-	<div class="header">
+	<div id="header">
 			<div class="half-sized">
-				<div id="header-contact visible-desktop">contact</div>
+				<div id="header-contact" class="visible-desktop">contact</div>
 				<div id="logo" class="centered"><img src="http://placehold.it/340x100" alt="logo"></div>
 				<div id="logo-caption" class="centered">logo caption</div>
 				
@@ -28,24 +28,26 @@
 					</ul>
 				</nav>
 			</div>
-			<div id="slider" class="wide half-sized">
+			<div id="slider" class="half-sized">
 				<!-- <img src="http://placehold.it/1600x500" alt="slider"> -->
 				<div class="background"></div>
-				<div id="scroll-to-content" class="centered visible-desktop"><a href="#">DOWN</a></div>
+				<div id="scroll-to-content" class="centered hidden-phone hidden-tablet circle"><a class="circle" href="#">DOWN</a></div>
 			</div>
 	</div>
 
 
-	<div id="quote" class="centered"><q>quotation</q></div>
+	<!-- <div id="quote" class="centered"><q>quotation</q></div> -->
 	
-	<h1>portfolio</h1>
-	<hr>
 <!-- TEST ZONE -->
 	<!-- <div id="portfolio" class="test-container"></div> -->
 <!-- TEST ZONE -->
+	<div class="content container">
+	<blockquote>Цитата</blockquote>
+	<div class="header">
+		<h1>portfolio</h1>
+		<h2>Интересные сайты визитки, интернет-магазины, каталоги</h2>
 	<div class="scene"><h1>SCENE</h1></div>
-	<div id="content" class="container">
-		
+	</div>
 			<ul class="thumbnails">
 				<li class="span3">
 					<div class="thumbnail">
@@ -183,18 +185,25 @@
 				</li>
 			</ul>
 	</div>
-	<hr><div class="container">
-		
+	<div class="footer container">
+			<div class="copyright centered visible-phone">&copy;ZOOM</div>
 		<div class="row">
-			<div class="span3">contacts 1</div>
-			<div class="span3">contcts 2</div>
-			<div class="span3 offset3">(c)copyright</div>
+			<div class="span3">
+				<p><strong>Phone</strong> +7.904.977.4036</p>
+				<p><strong>Mail</strong> mail@zoom74.ru</p>
+				<p><strong>Skype</strong> ZOOM74</p>
+		
+			</div>
+			<div class="span3"><p>454000, Челябинск,<br/> 
+Блюхера 21 - 104</p></div>
+			<div class="span1 offset5 hidden-phone">&copy;ZOOM</div>
 		</div>
 	</div>
 <!-- end body -->
 <script src="js/jquery-2.0.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.scrollTo.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
 <script src="js/jquery.isotope.min.js"></script>
 
 <script src="js/script.js"></script>

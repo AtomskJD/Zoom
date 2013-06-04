@@ -23,6 +23,16 @@ var Zoom = {
 		if (container.find('nav a').length) {
 			Zoom.Navigation.init(container.find('nav a'));
 		};
+
+		/*init Waypoints*/
+		$('#logo').waypoint(function(){
+			console.log("YOU WTF");
+			$('#scroll-to-content').fadeOut();
+		});
+		$('#logo').waypoint(function(){
+			console.log("YOU WTF");
+			$('#scroll-to-content').fadeIn();
+		},{offset:50});
 //TODO: переписать под инициализацию-тело
 
 /*$('.test-container').isotope({
@@ -57,7 +67,7 @@ Zoom.scrollToContent = {
 		var obj = $(e).find('a');
 		$(obj).click(function(){
 
-			$(window).scrollTo('#content', 400);
+			$(window).scrollTo('.content', 600);
 		});
 	}
 }

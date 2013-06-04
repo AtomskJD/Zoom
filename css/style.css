@@ -1,10 +1,80 @@
-.half-sized{
-	overflow: hidden;
-	background: #FFD;
-}
+/* 
+Created 04/06/2013 for zoom74.ru by @minru9
+#E01926
+#F9F9F9
 
+#FBDC21
+
+#4B4B4B
+#3B3B3B
+#222222
+#191919
+ */
+/* FONTS
+font-family: 'Cuprum', sans-serif;
+font-family: 'PT Serif', serif;
+font-family: 'PT Sans Caption', sans-serif;
+ */
+ @import url(http://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic|PT+Serif:400italic|PT+Sans+Caption&subset=cyrillic,cyrillic-ext,latin);
+ 
+ /* REGULARS */
+ *{
+ 	outline: medium none !important;
+ }
+body{
+	background: #F9F9F9;
+	font-family: 'Cuprum';
+	color: #222;
+}
+.content{
+	padding-top: 100px;
+}
+.header{
+	border-bottom: 1px #222 solid;
+	padding-bottom: 22px;
+	margin-bottom: 85px;
+}
+.footer{
+	border-top: 1px solid #222;
+	font-size: 16px;
+	padding: 20px;
+}
+.footer .copyright{
+	font-size: 20px;
+	font-weight: bold;
+	border-bottom: 1px solid #222;
+	padding: 15px 0;
+	margin: 0 0 20px 0;
+}
+h1{
+	text-transform: uppercase;
+	font-size: 50px;
+	line-height: 62px;
+}
+h2{
+	font-size: 20px;
+	line-height: 25px;
+	font-weight: normal;
+	color: #3B3B3B;
+}
+.half-sized{
+	/* overflow: hidden; */
+	/*background: #FFD;*/
+	min-height: 272px;
+}
+.centered{
+	float: none;
+	margin: auto;
+	text-align: center;
+}
+.fullwidth{
+	width:100%;
+}
+#logo{
+	margin-top: 80px;
+}
 #slider{
-	overflow: hidden;
+	/*overflow: hidden;*/
 	/*position: absolute;*/
 }
 #slider .background{
@@ -18,11 +88,16 @@
 
 }
 #scroll-to-content{
-	background:#FF0;
+	background: #E01926;
 	position: relative;
-	margin: -50px auto 0;
-	/*left: 50%;
-	z-index: 1;*/
+	margin: -40px auto 0;
+	
+	z-index: 1; 
+	border: 5px solid #F9F9F9;
+}
+#scroll-to-content a{
+	display: block;
+	text-indent: -2000px;
 }
 .scene{
 	display: none;
@@ -33,6 +108,14 @@
 	left: 0;
 	background: #FCF;
 }
+.circle {
+	width: 50px;
+	height: 50px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
 /*navigation bar*/
 nav {
 	border-top: 1px #222 solid;
@@ -76,6 +159,38 @@ nav li.active a span{
 }
 
 /*navigation bar END*/
+
+/*ADAPTIVE*/
+	/* Large desktop */
+	@media (min-width: 1200px) {
+		#logo{
+			margin-top: 80px;
+		}
+	}
+	 
+	/* Portrait tablet to landscape and desktop */
+	@media (min-width: 768px) and (max-width: 979px) {
+		#logo{
+			margin-top: 50px;
+		}
+	}
+	 
+	/* Landscape phone to portrait tablet */
+	@media (max-width: 767px) {
+		.footer{
+			border-top: 1px solid #222;
+			padding: 0;
+		}
+		#logo{
+			margin-top: 20px;
+		}
+	}
+	 
+	/* Landscape phones and down */
+	@media (max-width: 480px) { ... }
+/*ADAPTIVE END*/
+
+
 .test-container{
 	width: 100%;
 	height: 500px;
@@ -102,13 +217,4 @@ nav li.active a span{
 }
 .color3{
 	background:#aaa;
-}
-
-.centered{
-	float: none;
-	margin: auto;
-	text-align: center;
-}
-.fullwidth{
-	width:100%;
 }
