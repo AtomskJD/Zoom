@@ -1,9 +1,10 @@
 /* 
 Created 04/06/2013 for zoom74.ru by @minru9
-#E01926
-#F9F9F9
+COLORS & FONTS
+#E01926 	red
+#F9F9F9 	BG
 
-#FBDC21
+#FBDC21 	alternate
 
 #4B4B4B
 #3B3B3B
@@ -23,8 +24,16 @@ font-family: 'PT Sans Caption', sans-serif;
  }
 body{
 	background: #F9F9F9;
-	font-family: 'Cuprum';
+	font-family: 'Cuprum', "Helvetica Neue", Helvetica, Arial, sans-serif;;
 	color: #222;
+}
+a, a:visited, a:focus{
+	color: #222;
+	text-decoration: none;
+}
+a:hover{
+	color: #E01926;
+	text-decoration: none;
 }
 .content{
 	padding-top: 100px;
@@ -71,14 +80,21 @@ h2{
 	width:100%;
 }
 #logo{
-	margin-top: 80px;
+	margin-top: 50px;
+}
+#logo-caption{
+	margin-bottom: 20px;
+	padding: 20px 0;
+	font-family: "PT Sans Caption", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 21px;
 }
 #slider{
 	/*overflow: hidden;*/
 	/*position: absolute;*/
 }
 #slider .background{
-		background-image: url(http://placehold.it/1600x500);
+		background-image: url("../img/bg1.jpg");
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -95,7 +111,7 @@ h2{
 	z-index: 1; 
 	border: 5px solid #F9F9F9;
 }
-#scroll-to-content a{
+#scroll-to-content a span{
 	display: block;
 	text-indent: -2000px;
 }
@@ -116,6 +132,34 @@ h2{
 	border-radius: 50px;
 }
 
+/*ICONS myicon*/
+[class^='myicon-'],
+[class*=' myicon-']{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-image: url("../img/icons.png");
+}
+.myicon-message, .myicon-message-big{
+	background-position: 0 		0;
+}
+.myicon-message-small{
+	background-position: -50px 	0;
+}
+.myicon-down, .myicon-down-white{
+	background-position: 1px  	-50px;
+}
+.myicon-down-black{
+	background-position: -50px 	-50px;
+}
+.myicon-plus-white{
+	background-position: 2px 	-101px;
+}
+.myicon-plus-red{
+	background-position: -48px 	-100px;
+}
+/*ICONS myicon END*/
 /*navigation bar*/
 nav {
 	border-top: 1px #222 solid;
@@ -143,8 +187,12 @@ nav li a{
 	line-height: 21px;
 	padding: 15px 5px 6px;
 
+	font-size: 23px;
+	line-height: 26px;
+	font-weight: bold;
 	text-transform: uppercase;
 }
+/* верхний анимированный блок */
 nav li a span{
 	background: #222;
 	height: 4px;
@@ -157,6 +205,9 @@ nav li a span{
 nav li.active a span{
 	display: block;
 }
+nav li.active a{
+	color: #E01926;
+}
 
 /*navigation bar END*/
 
@@ -164,14 +215,14 @@ nav li.active a span{
 	/* Large desktop */
 	@media (min-width: 1200px) {
 		#logo{
-			margin-top: 80px;
+			margin-top: 50px;
 		}
 	}
 	 
 	/* Portrait tablet to landscape and desktop */
 	@media (min-width: 768px) and (max-width: 979px) {
 		#logo{
-			margin-top: 50px;
+			margin-top: 30px;
 		}
 	}
 	 
