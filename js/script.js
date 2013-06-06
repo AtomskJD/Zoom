@@ -25,20 +25,27 @@ var Zoom = {
 		};
 
 		/*init Waypoints*/
-		$('#logo').waypoint(function(){
-			console.log("YOU WTF");
+		$('#logo img').waypoint(function(){
+			console.log("спрятал");
 			$('#scroll-to-content').fadeOut();
 		});
-		$('#logo').waypoint(function(){
-			console.log("YOU WTF");
+		$('#logo img').waypoint(function(){
+			console.log("показал");
 			$('#scroll-to-content').fadeIn();
-		},{offset:50});
+		},{offset:20});
 //TODO: переписать под инициализацию-тело
 
 /*$('.test-container').isotope({
 	itemSelector: '.item',
 	layoutMode: 'fitRows'
 });*/var iii = 1;
+		$('.contact-button').mouseover(function(){
+			$('.contact-panel').slideDown();
+		});
+		$('.contact-panel').mouseout(function(){
+			$(this).slideUp();
+		});
+
 		$('h3').click(function(){
 
 			$('.test-container').load('item1.html #item'+iii);

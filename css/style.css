@@ -27,11 +27,11 @@ body{
 	font-family: 'Cuprum', "Helvetica Neue", Helvetica, Arial, sans-serif;;
 	color: #222;
 }
-a, a:visited, a:focus{
+a, a:visited{
 	color: #222;
 	text-decoration: none;
 }
-a:hover{
+a:hover, a:focus{
 	color: #E01926;
 	text-decoration: none;
 }
@@ -79,8 +79,26 @@ h2{
 .fullwidth{
 	width:100%;
 }
+.contact-panel{
+	position: absolute;
+	color: #F9F9F9;
+	background: #E01926;
+	top: 0;
+	height: 70px;
+	width: 100%;
+	z-index: 1;
+	display: none;
+}
+.contact-button{
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	text-indent: -2000px;
+	width: 50px;
+	height: 50px;
+}
 #logo{
-	margin-top: 50px;
+	padding-top: 50px;
 }
 #logo-caption{
 	margin-bottom: 20px;
@@ -131,6 +149,45 @@ h2{
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
 }
+.content > blockquote{
+	position: relative;
+}
+/* Цитата*/
+blockquote.quote{
+	width: 500px;
+	display: block;
+	border: 0;
+	padding: 20px;
+}
+blockquote.quote:before, blockquote.quote:after{
+	content: "\"";
+	color: #E01926;
+	/*display: block;*/
+	position: absolute;
+}
+blockquote.quote:after{
+	top: 100%;
+	left: 100%;
+}
+blockquote.quote:before{
+	top: 0;
+	left: 0;
+}
+
+/*
+blockquote i{
+	font-size: 51px;
+	color: #E01926;
+	position: absolute;
+}
+i.open{
+	top: 0;
+	left: 0;
+}
+i.closed{
+	top: 100%;
+	left: 100%;
+}*/
 
 /*ICONS myicon*/
 [class^='myicon-'],
@@ -189,7 +246,7 @@ nav li a{
 
 	font-size: 23px;
 	line-height: 26px;
-	font-weight: bold;
+	font-weight: normal;
 	text-transform: uppercase;
 }
 /* верхний анимированный блок */
@@ -205,8 +262,9 @@ nav li a span{
 nav li.active a span{
 	display: block;
 }
-nav li.active a{
-	color: #E01926;
+nav li.active a, nav li a:focus{
+	/*color: #E01926;*/
+	font-weight: bold;
 }
 
 /*navigation bar END*/
@@ -215,14 +273,14 @@ nav li.active a{
 	/* Large desktop */
 	@media (min-width: 1200px) {
 		#logo{
-			margin-top: 50px;
+			padding-top: 50px;
 		}
 	}
 	 
 	/* Portrait tablet to landscape and desktop */
 	@media (min-width: 768px) and (max-width: 979px) {
 		#logo{
-			margin-top: 30px;
+			padding-top: 30px;
 		}
 	}
 	 
@@ -233,12 +291,14 @@ nav li.active a{
 			padding: 0;
 		}
 		#logo{
-			margin-top: 20px;
+			padding-top: 20px;
 		}
 	}
 	 
 	/* Landscape phones and down */
-	@media (max-width: 480px) { ... }
+	@media (max-width: 480px) {
+
+	}
 /*ADAPTIVE END*/
 
 
