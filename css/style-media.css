@@ -1,0 +1,92 @@
+/*ADAPTIVE*/
+/* Large desktop */
+	@media (min-width: 1200px) {
+
+	}
+	 
+/* Portrait tablet to landscape and desktop */
+	@media (min-width: 768px) and (max-width: 979px) {
+
+		.content{
+			padding-top: 80px;
+		}
+		#logo{
+			padding-top: 30px;
+		}
+		#logo-caption{
+			font-size: 19px;
+			line-height: 22px;
+		}
+		blockquote.quote{
+			font-size: 32px;
+			line-height: 40px;
+		}
+		blockquote.quote:before, blockquote.quote:after{
+			font-size: 110px;
+		}
+
+	}
+	 
+/* Landscape phone to portrait tablet */
+	@media (max-width: 767px) {
+		.header{
+			padding-bottom: 0px;
+		}
+		#slider .background, .half-sized{
+				min-height: 250px;
+		}
+		#slider .background, #slider{
+			min-height: 180px;
+		}
+		.content{
+			padding-top: 60px;
+		}
+		#logo{
+			padding-top: 20px;
+		}
+		#logo-caption{
+			font-size: 18px;
+			line-height: 22px;
+		}
+		nav li a{
+			font-size: 20px;
+			line-height: 23px;
+		}
+		h1{
+			font-size: 32px;
+			line-height: 40px;
+		}
+		.footer{
+			border-top: 1px solid #222;
+			padding: 0;
+		}
+		blockquote.quote{
+			font-size: 28px;
+			line-height: 38px;
+		}
+		blockquote.quote:before, blockquote.quote:after{
+			font-size: 100px;
+		}
+	}
+	 
+/* Landscape phones and down */
+	@media (max-width: 480px) {
+		.content{
+			padding-top: 40px;
+		}
+
+		nav li a{
+			font-size: 18px;
+			line-height: 21px;
+		}
+		blockquote.quote{
+			font-size: 26px;
+			line-height: 34px;
+		}
+		h1{
+			font-size: 30px;
+			line-height: 38px;
+		}
+
+	}
+/*ADAPTIVE END*/

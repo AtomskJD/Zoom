@@ -33,6 +33,17 @@ var Zoom = {
 			console.log("показал");
 			$('#scroll-to-content').fadeIn();
 		},{offset:20});
+
+		/* Init layerSlider*/
+		if(container.find('.slider').length){
+			$('.slider').layerSlider({
+					skinsPath : '../layerslider/skins/',
+					skin : 'glass',
+					thumbnailNavigation : 'hover',
+					hoverPrevNext : false,
+					autoStart : true
+				});
+		}
 //TODO: переписать под инициализацию-тело
 
 /*$('.test-container').isotope({

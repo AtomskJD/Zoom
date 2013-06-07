@@ -24,7 +24,7 @@ font-family: 'PT Sans Caption', sans-serif;
  }
 body{
 	background: #F9F9F9;
-	font-family: 'Cuprum', "Helvetica Neue", Helvetica, Arial, sans-serif;;
+	font-family: 'Cuprum', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #222;
 }
 a, a:visited{
@@ -69,7 +69,6 @@ h2{
 .half-sized{
 	/* overflow: hidden; */
 	/*background: #FFD;*/
-	min-height: 272px;
 }
 .centered{
 	float: none;
@@ -101,13 +100,16 @@ h2{
 	padding-top: 50px;
 }
 #logo-caption{
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	padding: 20px 0;
 	font-family: "PT Sans Caption", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	font-size: 21px;
+	line-height: 25px;
 }
 #slider{
+	/* height: 200px;
+	min-height: 100px; */
 	/*overflow: hidden;*/
 	/*position: absolute;*/
 }
@@ -116,10 +118,13 @@ h2{
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		min-height: 180px;
 		position: relative;
 		height: 100%;
+		width: 100%;
 
+}
+#slider .background, .half-sized{
+		min-height: 275px;
 }
 #scroll-to-content{
 	background: #E01926;
@@ -154,20 +159,24 @@ h2{
 }
 /* Цитата*/
 blockquote.quote{
-	width: 500px;
+	max-width: 80%;
 	display: block;
 	border: 0;
 	padding: 20px;
+
+	font-size: 36px;
+	line-height: 44px;
 }
 blockquote.quote:before, blockquote.quote:after{
 	content: "\"";
 	color: #E01926;
 	/*display: block;*/
 	position: absolute;
+	font-size: 120px;
 }
 blockquote.quote:after{
 	top: 100%;
-	left: 100%;
+	left: 92%;
 }
 blockquote.quote:before{
 	top: 0;
@@ -241,10 +250,10 @@ nav li{
 nav li a{
 	position: relative;
 	display: inline-block;
-	line-height: 21px;
 	padding: 15px 5px 6px;
 
 	font-size: 23px;
+	line-height: 21px;
 	line-height: 26px;
 	font-weight: normal;
 	text-transform: uppercase;
@@ -269,37 +278,6 @@ nav li.active a, nav li a:focus{
 
 /*navigation bar END*/
 
-/*ADAPTIVE*/
-	/* Large desktop */
-	@media (min-width: 1200px) {
-		#logo{
-			padding-top: 50px;
-		}
-	}
-	 
-	/* Portrait tablet to landscape and desktop */
-	@media (min-width: 768px) and (max-width: 979px) {
-		#logo{
-			padding-top: 30px;
-		}
-	}
-	 
-	/* Landscape phone to portrait tablet */
-	@media (max-width: 767px) {
-		.footer{
-			border-top: 1px solid #222;
-			padding: 0;
-		}
-		#logo{
-			padding-top: 20px;
-		}
-	}
-	 
-	/* Landscape phones and down */
-	@media (max-width: 480px) {
-
-	}
-/*ADAPTIVE END*/
 
 
 .test-container{
