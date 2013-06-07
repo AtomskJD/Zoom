@@ -1,12 +1,23 @@
 /*ADAPTIVE*/
+
 /* Large desktop */
 	@media (min-width: 1200px) {
+	#logo{
+		padding-top: 0;
+	}
+	#logo-caption{
+		padding: 40px 0;
+	}
 
 	}
 	 
 /* Portrait tablet to landscape and desktop */
 	@media (min-width: 768px) and (max-width: 979px) {
-
+		.fit{
+			position: static;
+			margin: 0;
+			width: 100%;
+		}
 		.content{
 			padding-top: 80px;
 		}
@@ -23,20 +34,31 @@
 		}
 		blockquote.quote:before, blockquote.quote:after{
 			font-size: 110px;
+		}		
+		#slider .background, #slider{
+				min-height: 250px;
+				height: 250px;
 		}
 
 	}
 	 
 /* Landscape phone to portrait tablet */
 	@media (max-width: 767px) {
+		.fit{
+			position: static;
+			margin: 0;
+			width: 100%;
+		}
 		.header{
 			padding-bottom: 0px;
 		}
-		#slider .background, .half-sized{
-				min-height: 250px;
+		.half-sized{
+			min-height: 250px;
 		}
+
 		#slider .background, #slider{
 			min-height: 180px;
+			height: 180px;
 		}
 		.content{
 			padding-top: 60px;
@@ -71,6 +93,11 @@
 	 
 /* Landscape phones and down */
 	@media (max-width: 480px) {
+		.fit{
+			position: static;
+			margin: 0;
+			width: 100%;
+		}
 		.content{
 			padding-top: 40px;
 		}
