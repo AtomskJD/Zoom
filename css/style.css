@@ -66,10 +66,55 @@ h2{
 	font-weight: normal;
 	color: #3B3B3B;
 }
+h3{
+	border-bottom: 1px solid #222;
+}
 .half-sized{
 	/* overflow: hidden; */
 	/*background: #FFD;*/
 	position: relative;
+}
+.thumbnail{
+	border: 0;
+	box-shadow: 0 0 0;
+	padding: 0;
+}
+.thumbnail:hover h3, .thumbnail:focus h3{
+	color: #E01926;
+}
+.thumbnail-img{
+	position: relative;
+}
+.thumbnail-img i{
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -25px;
+	margin-top: -25px;
+}
+.thumbnail:hover .thumbnail-img i{
+	display: block;
+}
+.thumbnail:hover span.img-hover-bg-left{
+	background: #E01926;
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	left: -5px;
+	top: -5px;
+	display: block;
+	z-index: -1;
+}
+.thumbnail:hover span.img-hover-bg-right{
+	background: #E01926;
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	right: -5px;
+	bottom: -5px;
+	display: block;
+	z-index: -1;
 }
 .fit{
 	position: absolute;
@@ -167,10 +212,11 @@ h2{
 }
 /* Цитата*/
 blockquote.quote{
-	max-width: 80%;
-	display: block;
+	max-width: 80%
+;	display: block;
 	border: 0;
-	padding: 20px;
+	padding: 20px 20px 20px 20px;
+	margin-bottom: 80px;
 
 	font-size: 36px;
 	line-height: 44px;
@@ -184,7 +230,7 @@ blockquote.quote:before, blockquote.quote:after{
 }
 blockquote.quote:after{
 	top: 100%;
-	left: 92%;
+	left: 95%;
 }
 blockquote.quote:before{
 	top: 0;

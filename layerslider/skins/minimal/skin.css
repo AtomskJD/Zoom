@@ -8,9 +8,10 @@
 	box-shadow: 0px 10px 150px -50px #000;
 }
 
+
 .ls-minimal .ls-bottom-nav-wrapper {
 	text-align: center;
-	margin: 10px auto 0px auto;
+	margin: -30px auto 0px auto;
 	position: relative;
 }
 
@@ -106,11 +107,11 @@
 }
 
 .ls-minimal .ls-nav-prev {
-	left: -25px;	
+	left: 0px;	
 }
 
 .ls-minimal .ls-nav-next {
-	right: -25px;	
+	right: 0px;	
 }
 
 

@@ -37,19 +37,32 @@ var Zoom = {
 		/* Init layerSlider*/
 		if(container.find('.slider').length){
 			$('.slider').layerSlider({
-					skinsPath : '../layerslider/skins/',
-					skin : 'glass',
+					skinsPath : 'layerslider/skins/',
+					skin : 'noskin',
 					thumbnailNavigation : 'hover',
 					hoverPrevNext : false,
 					autoStart : true
 				});
+		}		
+		if(container.find('.slider-preview').length){
+			$('.slider-preview').layerSlider({
+					skinsPath : 'layerslider/skins/',
+					skin : 'minimal',
+					thumbnailNavigation : 'hover',
+					showBarTimer : true,
+					showCircleTimer : false,
+					hoverPrevNext : false,
+					autoStart : false
+				});
 		}
+
 //TODO: переписать под инициализацию-тело
 
 /*$('.test-container').isotope({
 	itemSelector: '.item',
 	layoutMode: 'fitRows'
 });*/var iii = 1;
+		/* Init slideDown contacts*/
 		$('.contact-button').mouseover(function(){
 			$('.contact-panel').slideDown();
 		});
@@ -57,15 +70,17 @@ var Zoom = {
 			$(this).slideUp();
 		});
 
-		$('h3').click(function(){
-
-			$('.test-container').load('item1.html #item'+iii);
+		$('.thumbnails h3').click(function(){
+			$('.scene').show();
+			$('.scene #layerslider').load('gallery.html #layerslider .ls-layer');
+			$('#layerslider').layerSlider({
+					skinsPath : 'layerslider/skins/',
+					skin : 'glass',
+					thumbnailNavigation : 'hover',
+					hoverPrevNext : false,
+					autoStart : false
+				});
 			iii = iii + 1;
-			/*$(window).scrollTo('h1', 400);
-			$(window).queue(function(){
-				$('.scene').slideToggle(1000);
-				$(this).dequeue();
-			});*/
 			
 			// $('.scene').load('grid.html');
 				// $('.scene').slideToggle(1000);
@@ -75,6 +90,8 @@ var Zoom = {
 				$('.test-container').isotope( 'insert', newItems );*/
 
 		});
+
+		
 	}//END INIT
 
 };
