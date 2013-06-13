@@ -39,7 +39,9 @@ var Zoom = {
 			$('.slider').layerSlider({
 					skinsPath : 'layerslider/skins/',
 					skin : 'noskin',
-					thumbnailNavigation : 'hover',
+					thumbnailNavigation : 'none',
+					navButtons : false,
+					pauseOnHover : false,
 					hoverPrevNext : false,
 					showBarTimer : true,
 					showCircleTimer : false,
@@ -68,7 +70,8 @@ var Zoom = {
 		$('.contact-button').mouseenter(function(){
 			$('.contact-panel').slideDown();
 		});
-		$('.contact-panel').mouseout(function(){
+		$('.contact-panel*').mouseleave(function(){
+			// $(this).hide();
 			$(this).slideUp();
 		});
 		/* INIT scene*/
@@ -76,7 +79,10 @@ var Zoom = {
 		$('.thumbnails h3').click(function(){
 			$('.scene').show();
 			$('.myicon-close-black').show();
-			$('.scene').load('gallery.html #layerslider');
+
+			var sid = $(this).parent().data('sceneId');
+			console.log(sid);
+			$('.scene').load('gallery.html #'+ sid);
 			$(window).scrollTo('.scene', 600);
 			$('.ls-bottom-nav-wrapper').remove();
 			$('.scene').layerSlider({
@@ -97,6 +103,7 @@ var Zoom = {
 				$('.test-container').isotope( 'insert', newItems );*/
 
 		});
+		/*INIT close button*/
 		$('.myicon-close-black').click(function(){
 						console.log('hide scene');
 						$('.scene').slideUp(600);

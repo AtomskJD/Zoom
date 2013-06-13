@@ -55,6 +55,22 @@ a:hover, a:focus{
 	padding: 15px 0;
 	margin: 0 0 20px 0;
 }
+.columnn{
+	width: 200px;
+	float: left;
+	padding: 5px 20px;
+	text-align: left;
+	font-size: 16px;
+	font-style: italic;
+}
+.columnn span{
+	float: left;
+	font-weight: normal;
+}
+.columnn .strong{
+	font-weight: bold;
+	width: 55px;
+}
 h1{
 	text-transform: uppercase;
 	font-size: 50px;
@@ -81,6 +97,7 @@ h3{
 }
 .thumbnail:hover h3, .thumbnail:focus h3{
 	color: #E01926;
+	cursor: pointer;
 }
 .thumbnail-img{
 	position: relative;
@@ -214,6 +231,7 @@ h3{
 	text-indent: -2000px;
 	z-index: 3;
 	display: none;
+	cursor: pointer;
 }
 .circle {
 	width: 50px;
