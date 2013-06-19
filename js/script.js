@@ -76,7 +76,7 @@ var Zoom = {
 		});
 		/* INIT scene*/
 		/* Click scene*/
-		$('.thumbnails h3').click(function(){
+		$('.thumbnails .mybtn').click(function(){
 			$('.scene').show();
 			$('.myicon-close-black').show();
 

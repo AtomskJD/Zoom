@@ -78,6 +78,9 @@
 			font-size: 32px;
 			line-height: 40px;
 		}
+		p.h1{
+			font-size: 27px;
+		}
 		.footer{
 			border-top: 1px solid #222;
 			padding: 0;
@@ -113,6 +116,9 @@
 		h1{
 			font-size: 30px;
 			line-height: 38px;
+		}
+		p.h1{
+			font-size: 25px;
 		}
 
 	}

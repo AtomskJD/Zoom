@@ -55,6 +55,21 @@ a:hover, a:focus{
 	padding: 15px 0;
 	margin: 0 0 20px 0;
 }
+.spaser-200{
+	height: 200px;
+}
+.spaser-150{
+	height: 150px;
+}
+.spaser-100{
+	height: 100px;
+}
+.spaser-85{
+	height: 85px;
+}
+.spaser-50{
+	height: 50px;
+}
 .columnn{
 	width: 200px;
 	float: left;
@@ -71,10 +86,14 @@ a:hover, a:focus{
 	font-weight: bold;
 	width: 55px;
 }
-h1{
+h1, p.h1{
 	text-transform: uppercase;
 	font-size: 50px;
 	line-height: 62px;
+}
+p.h1{
+	font-weight: bold;
+	font-size: 45px;
 }
 h2{
 	font-size: 20px;
