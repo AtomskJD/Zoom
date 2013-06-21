@@ -102,6 +102,7 @@ h2{
 	color: #3B3B3B;
 }
 h3{
+	text-transform: uppercase;
 	border-bottom: 1px solid #222;
 }
 .half-sized{
@@ -109,10 +110,16 @@ h3{
 	/*background: #FFD;*/
 	position: relative;
 }
+
 .thumbnail{
 	border: 0;
 	box-shadow: 0 0 0;
 	padding: 0;
+}
+.thumbnail p{
+	font-family: 'PT Serif', serif;
+	font-style: italic;
+	color: #4B4B4B;
 }
 .thumbnail:hover h3, .thumbnail:focus h3{
 	color: #E01926;
@@ -235,8 +242,7 @@ h3{
 .scene{
 	display: none;
 	position: relative;
-	height: 700px;
-	width: 500px;
+	height: 500px;
 	top: 0;
 	left: 0;
 	background: #FCF;

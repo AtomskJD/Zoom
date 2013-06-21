@@ -2,6 +2,8 @@ var Zoom = {
 	mobile: 480,
 	tablet: 768,
 	desktop: 980,
+	
+	sid: 'id0',
 
 	init: function(container){
 		var _this = this;
@@ -79,19 +81,28 @@ var Zoom = {
 		$('.thumbnails .mybtn').click(function(){
 			$('.scene').show();
 			$('.myicon-close-black').show();
-
 			var sid = $(this).parent().data('sceneId');
-			console.log(sid);
-			$('.scene').load('gallery.html #'+ sid);
-			$(window).scrollTo('.scene', 600);
-			$('.ls-bottom-nav-wrapper').remove();
-			$('.scene').layerSlider({
-					skinsPath : 'layerslider/skins/',
-					skin : 'minimal',
-					thumbnailNavigation : 'hover',
-					hoverPrevNext : false,
-					autoStart : false
-				});
+
+			if(Zoom.sid != sid){
+			console.log('is ZOOM sid ' + Zoom.sid);
+				// $('#'+Zoom.sid).remove();
+				// $('.ls-bottom-nav-wrapper').remove();
+				$('.scene').layerSlider('stop');
+				$('.scene').empty();
+			Zoom.sid = sid;
+				console.log('sid is ' + sid);
+				$('.scene').load('gallery.html #'+ sid);
+				$(window).scrollTo('.scene', 600);
+				$('.scene').layerSlider({
+						skinsPath : 'layerslider/skins/',
+						skin : 'minimal',
+						thumbnailNavigation : 'hover',
+						showBarTimer : true,
+						showCircleTimer : false,
+						hoverPrevNext : false,
+						autoStart : true
+					});
+			} 
 
 			iii = iii + 1;
 			
